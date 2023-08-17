@@ -1,5 +1,11 @@
 const JobDuties = () => {
-  return <div>Content</div>;
+  return (
+    <div>
+      <span>
+        List of your <b>Job Duties</b>
+      </span>
+    </div>
+  );
 };
 
 export default JobDuties;

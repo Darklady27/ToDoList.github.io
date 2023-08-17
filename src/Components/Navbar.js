@@ -7,6 +7,7 @@ import { BsFillHouseAddFill } from "react-icons/bs";
 import { MdWork } from "react-icons/md";
 import { CgGym } from "react-icons/cg";
 import { GiPeaceDove } from "react-icons/gi";
+import { BiSolidPlaneAlt } from "react-icons/bi";
 
 const Navbar = ({ show, set }) => {
   return (
@@ -48,6 +49,12 @@ const Navbar = ({ show, set }) => {
           <Link to="/workout" onClick={() => set(false)}>
             <CgGym className="images" />
             Workout
+          </Link>
+        </li>
+        <li>
+          <Link to="/trip" onClick={() => set(false)}>
+            <BiSolidPlaneAlt className="images" />
+            Trip
           </Link>
         </li>
       </ul>

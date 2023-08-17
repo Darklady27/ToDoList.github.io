@@ -6,6 +6,7 @@ import JobDuties from "./pages/JobDuties";
 import IndividualUse from "./pages/IndividualUse";
 import ShoppingList from "./pages/ShoppingList";
 import Workout from "./pages/Workout";
+import Trip from "./pages/Trip";
 import HouseholdChores from "./pages/HouseholdChores";
 import { TiThMenu } from "react-icons/ti";
 import "./App.css";
@@ -27,6 +28,7 @@ function App() {
           <Route path="/individual_use" element={<IndividualUse />}></Route>
           <Route path="/shopping_list" element={<ShoppingList />}></Route>
           <Route path="/workout" element={<Workout />}></Route>
+          <Route path="/trip" element={<Trip />}></Route>
         </Routes>
         <Navbar show={showNav} set={setShowNav} />
       </div>

@@ -1,5 +1,11 @@
 const ShoppingList = () => {
-  return <div>Content</div>;
+  return (
+    <div>
+      <span>
+        List of your <b>Shopping List</b>
+      </span>
+    </div>
+  );
 };
 
 export default ShoppingList;

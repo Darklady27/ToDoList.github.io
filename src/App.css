@@ -75,15 +75,80 @@ header svg {
   margin: 50px;
 }
 
-b {
+.name {
   font-size: 80px;
   color: aquamarine;
 }
 
-.selection {
+.bracket {
   font-size: 40px;
 }
 
 .homeimg {
   font-size: 20px;
+}
+
+.textarea {
+  text-align: left;
+  margin-left: -250px;
+  padding-top: 50pxx;
+}
+
+.notes {
+  background-attachment: local;
+  background-image: linear-gradient(to right, white 10px, transparent 10px),
+    linear-gradient(to left, white 10px, transparent 10px),
+    repeating-linear-gradient(
+      white,
+      white 30px,
+      #ccc 30px,
+      #ccc 31px,
+      white 31px
+    );
+  line-height: 31px;
+  padding: 8px 10px;
+}
+
+button {
+  margin: -100px 0px 0px 350px;
+  padding: 10px;
+}
+
+#tasks {
+  box-sizing: border-box;
+  font-family: Garamond, cursive;
+  font-size: 16px;
+  background: whitesmoke;
+  margin: 0;
+  padding: 16px;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+#tasks ol {
+  list-style-position: inside;
+  width: 600px;
+  max-width: 100%;
+  background: white;
+  box-shadow: 4px 4px 12px rgb(0 0 0 / 0.15);
+  padding: 0;
+  margin: 0;
+  border-radius: 1.6px;
+}
+
+#tasks ol li {
+  padding: 0 0 0 16px;
+}
+
+#tasks ol li:not(:last-child) {
+  border-bottom: 1px solid lightblue;
+}
+
+#tasks ol li:first-child {
+  margin-top: 16px;
+}
+
+#tasks ol li:last-child {
+  margin-bottom: 16px;
 }
