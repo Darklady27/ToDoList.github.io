@@ -18,16 +18,8 @@ const HouseholdChores = () => {
 
   return (
     <div>
-      <span>
-        List of your <b>Household Chores</b>
-      </span>
-      <div>
-        <span id="tasks" className="entirelist">
-          <ol>{showTaskList()}</ol>
-        </span>
-      </div>
-      <div className="textarea">
-        <span>
+      <div className="items">
+        <div className="textfield">
           <textarea
             id="text"
             className="notes"
@@ -36,11 +28,23 @@ const HouseholdChores = () => {
             value={message}
             onChange={handleMessageChange}
           ></textarea>
-          <br></br>
-          <button id="add" onClick={() => setList(initialList.concat(message))}>
+        </div>
+        <div>
+          <button
+            className="add"
+            onClick={() => setList(initialList.concat(message))}
+          >
             Add
           </button>
-        </span>
+        </div>
+        <div id="tasks" className="entirelist">
+          <ol>
+            <div className="pattern">
+              <p className="title">List of your Household Chores</p>
+              <div className="content">{showTaskList()}</div>
+            </div>
+          </ol>
+        </div>
       </div>
     </div>
   );

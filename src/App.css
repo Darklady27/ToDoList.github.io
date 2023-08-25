@@ -1,97 +1,53 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital@1&family=Roboto+Serif:ital,opsz,wght@1,8..144,500&display=swap");
 
 body {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: "Montserrat", sans-serif;
   color: grey;
+  background-color: #b37bb48a;
+  min-height: 100vh;
+  min-width: 100vw;
 }
 
-header {
-  padding: 25px;
-  background: #240260;
-  height: 50px;
+.menubar {
+  background-color: rgb(22, 210, 119);
+  position: relative;
+  font-size: 1.4rem;
+  margin: 0 -3.1rem 0 -3.1rem;
 }
 
-.sidenav {
-  width: 200px;
-  background: #240260;
-  position: absolute;
-  height: 100vh;
-  padding-left: 80px;
-  padding-right: 35px;
-  margin: -50px;
-  left: -100%;
-  transition: all 0.5s;
+.mode_button {
+  margin-left: 3rem;
 }
 
-.sidenav.active {
-  left: 0;
-}
-
-.logo {
-  width: 150px;
-  margin-top: 50px;
-}
-
-ul {
-  padding: 0;
-}
-
-ul li {
-  list-style-type: none;
-  margin: 10px 0;
-}
-
-ul li a {
-  color: #eaecef;
-  text-decoration: none;
-  font-size: 16px;
-  display: block;
-  padding: 10px 15px;
-  border-radius: 6px;
-}
-
-ul li a:hover,
-ul li a.active {
-  background: #172b4d;
-}
-
-ul li a svg {
-  margin-right: 10px;
-}
-header svg {
-  font-size: 40px;
-}
-
-.main {
-  height: 90vh;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  font-size: 60px;
-  color: #414549;
-  margin: 50px;
+.menu_name {
+  margin-left: 0.5rem;
 }
 
 .name {
-  font-size: 80px;
-  color: aquamarine;
+  font-size: 5rem;
+  color: rgb(22, 210, 119);
 }
 
-.bracket {
-  font-size: 40px;
+.homepage {
+  text-align: center;
+  margin-top: 8rem;
+  font-size: 5rem;
+  position: absolute;
 }
 
-.homeimg {
-  font-size: 20px;
+.items {
+  position: absolute;
+  margin-left: 2rem;
+  padding-top: 0px;
+  display: flex;
+  flex-direction: row;
+  margin-top: 1.25rem;
 }
 
-.textarea {
-  text-align: left;
-  margin-left: -250px;
-  padding-top: 50pxx;
+.textfield {
+  padding: 5rem 1rem 1rem;
 }
 
 .notes {
@@ -100,55 +56,72 @@ header svg {
     linear-gradient(to left, white 10px, transparent 10px),
     repeating-linear-gradient(
       white,
-      white 30px,
-      #ccc 30px,
-      #ccc 31px,
-      white 31px
+      white 1.8rem,
+      #ccc 1.8rem,
+      #ccc 1.9rem,
+      white 1.9rem
     );
-  line-height: 31px;
-  padding: 8px 10px;
+  line-height: 1.9rem;
+  padding: 0.5rem 0.6rem;
 }
 
-button {
-  margin: -100px 0px 0px 350px;
-  padding: 10px;
+.add {
+  margin-top: 6rem;
+  margin-left: 3.1rem;
+  padding: 0.6rem;
 }
 
 #tasks {
   box-sizing: border-box;
   font-family: Garamond, cursive;
-  font-size: 16px;
-  background: whitesmoke;
-  margin: 0;
-  padding: 16px;
+  font-size: 1rem;
+  margin-top: 6rem;
+  padding: 0rem 1rem 1rem 1rem;
   display: grid;
-  place-items: center;
-  min-height: 100vh;
+  padding-left: 5rem;
 }
 
 #tasks ol {
-  list-style-position: inside;
-  width: 600px;
-  max-width: 100%;
-  background: white;
-  box-shadow: 4px 4px 12px rgb(0 0 0 / 0.15);
-  padding: 0;
-  margin: 0;
-  border-radius: 1.6px;
+  width: 50rem;
+  height: 35rem;
+  position: relative;
+  background-color: white;
+  box-shadow: 0px 0px 5px 0px #1b1b1b;
+  margin-top: -5rem;
+}
+
+#tasks ol ::before {
+  content: "";
+  width: 2px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 40px;
+  background-color: rgba(255, 0, 0, 0.6);
+}
+
+.pattern {
+  height: 95%;
+  background-image: repeating-linear-gradient(white 0px, white 24px, teal 25px);
+}
+
+.content {
+  padding-top: 0.4rem;
+  padding-left: 3.5rem;
+  padding-right: 1rem;
+  line-height: 1.56rem;
+  font-family: Garamond, cursive;
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  word-spacing: 0.3rem;
+}
+
+.title {
+  text-align: center;
+  font-size: 3vh;
+  font-weight: bold;
 }
 
 #tasks ol li {
-  padding: 0 0 0 16px;
-}
-
-#tasks ol li:not(:last-child) {
-  border-bottom: 1px solid lightblue;
-}
-
-#tasks ol li:first-child {
-  margin-top: 16px;
-}
-
-#tasks ol li:last-child {
-  margin-bottom: 16px;
+  padding: 0rem 0 0 1rem;
 }

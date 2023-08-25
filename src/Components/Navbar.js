@@ -1,4 +1,3 @@
-import logo from "./logo.png";
 import { Link } from "react-router-dom";
 import React from "react";
 import { PiHouse } from "react-icons/pi";
@@ -9,57 +8,70 @@ import { CgGym } from "react-icons/cg";
 import { GiPeaceDove } from "react-icons/gi";
 import { BiSolidPlaneAlt } from "react-icons/bi";
 
-const Navbar = ({ show, set }) => {
-  return (
-    <div className={show ? "sidenav active" : "sidenav"}>
-      <img src={logo} alt="Logo" className="logo" />
-      <ul>
-        <li>
-          <Link to="/" onClick={() => set(false)}>
-            <PiHouse className="images" />
-            Home
-          </Link>
-        </li>
-        <li>
-          <Link to="/household_chores" onClick={() => set(false)}>
-            <BsFillHouseAddFill className="images" />
-            Household Chores
-          </Link>
-        </li>
-        <li>
-          <Link to="/job_duties" onClick={() => set(false)}>
-            {" "}
-            <MdWork className="images" />
-            Job duties
-          </Link>
-        </li>
-        <li>
-          <Link to="/individual_use" onClick={() => set(false)}>
-            <GiPeaceDove className="images" />
-            Individual Use
-          </Link>
-        </li>
-        <li>
-          <Link to="/shopping_list" onClick={() => set(false)}>
-            <FaShoppingCart className="images" />
-            Shopping list
-          </Link>
-        </li>
-        <li>
-          <Link to="/workout" onClick={() => set(false)}>
-            <CgGym className="images" />
-            Workout
-          </Link>
-        </li>
-        <li>
-          <Link to="/trip" onClick={() => set(false)}>
-            <BiSolidPlaneAlt className="images" />
-            Trip
-          </Link>
-        </li>
-      </ul>
-    </div>
-  );
-};
+const Navbar = [
+  {
+    label: (
+      <Link to="/" className="menu_name">
+        Home
+      </Link>
+    ),
+    icon: <PiHouse className="images" style={{ fontSize: 25 }} />,
+    key: "home",
+  },
+  {
+    label: (
+      <Link to="/household_chores" className="menu_name">
+        HouseholdChores
+      </Link>
+    ),
+    icon: <BsFillHouseAddFill className="images" style={{ fontSize: 25 }} />,
+    key: "household",
+  },
+  {
+    label: (
+      <Link to="/job_duties" className="menu_name">
+        Job duties
+      </Link>
+    ),
+    icon: <MdWork className="images" style={{ fontSize: 25 }} />,
+    key: "duties",
+  },
+  {
+    label: (
+      <Link to="/individual_use" className="menu_name">
+        Individual Use
+      </Link>
+    ),
+    icon: <GiPeaceDove className="images" style={{ fontSize: 25 }} />,
+    key: "individual",
+  },
+  {
+    label: (
+      <Link to="/shopping_list" className="menu_name">
+        Shopping list
+      </Link>
+    ),
+    icon: <FaShoppingCart className="images" style={{ fontSize: 25 }} />,
+    key: "shopping",
+  },
+  {
+    label: (
+      <Link to="/workout" className="menu_name">
+        Workout
+      </Link>
+    ),
+    icon: <CgGym className="images" style={{ fontSize: 25 }} />,
+    key: "workout",
+  },
+  {
+    label: (
+      <Link to="/trip" className="menu_name">
+        Trip
+      </Link>
+    ),
+    icon: <BiSolidPlaneAlt className="images" style={{ fontSize: 25 }} />,
+    key: "trip",
+  },
+];
 
 export default Navbar;
