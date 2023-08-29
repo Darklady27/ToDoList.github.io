@@ -5,16 +5,14 @@ body {
   padding: 0;
   font-family: "Montserrat", sans-serif;
   color: grey;
-  background-color: #b37bb48a;
   min-height: 100vh;
   min-width: 100vw;
 }
 
 .menubar {
-  background-color: rgb(22, 210, 119);
   position: relative;
+  float: left;
   font-size: 1.4rem;
-  margin: 0 -3.1rem 0 -3.1rem;
 }
 
 .mode_button {
@@ -34,7 +32,6 @@ body {
   text-align: center;
   margin-top: 8rem;
   font-size: 5rem;
-  position: absolute;
 }
 
 .items {
