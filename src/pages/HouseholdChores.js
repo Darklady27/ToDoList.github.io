@@ -1,4 +1,5 @@
 import { React, useState } from "react";
+import { FaTrash } from "react-icons/fa";
 
 const HouseholdChores = () => {
   const [message, setMessage] = useState("");
@@ -11,9 +12,22 @@ const HouseholdChores = () => {
 
   const [initialList, setList] = useState([]);
 
+  const handleTrash = (index) => {
+    const newList = initialList.filter((_, i) => i !== index);
+    setList(newList);
+    console.log(newList);
+  };
+
   const showTaskList = () =>
     initialList.map((message, index) => {
-      return <li key={index}>{message}</li>;
+      return (
+        <li key={index}>
+          {message}
+          <button className="trash_delete" onClick={() => handleTrash(index)}>
+            <FaTrash />
+          </button>
+        </li>
+      );
     });
 
   return (
