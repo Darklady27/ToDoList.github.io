@@ -25,6 +25,8 @@ const App = () => {
     setIsDarkMode((previousValue) => !previousValue);
   };
 
+  // że ten button darkmode ucieka w dol po zmianie size ekran
+
   const navbarDarkMode = (
     <Button className="mode_button" onClick={handleClick}>
       Change Theme to {isDarkMode ? "Light" : "Dark"}

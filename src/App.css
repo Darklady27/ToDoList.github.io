@@ -47,6 +47,11 @@ body {
   padding: 5rem 1rem 1rem;
 }
 
+textarea {
+  border: none;
+  box-shadow: 0.06rem 0rem 0.6rem 0.6rem #888888;
+}
+
 .notes {
   background-attachment: local;
   background-image: linear-gradient(to right, white 10px, transparent 10px),
