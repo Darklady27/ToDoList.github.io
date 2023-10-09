@@ -94,9 +94,13 @@ const App = () => {
               <Typography>
                 <Content>
                   <Routes>
-                    <Route exact path="/" element={<Home key="home" />}></Route>
                     <Route
-                      path="/household_chores"
+                      exact
+                      path="/ToDoList/"
+                      element={<Home key="home" />}
+                    ></Route>
+                    <Route
+                      path="/ToDoList/household_chores"
                       element={
                         <PagesDescriptions
                           name="your Household Chores"
@@ -106,7 +110,7 @@ const App = () => {
                       }
                     ></Route>
                     <Route
-                      path="/job_duties"
+                      path="/ToDoList/job_duties"
                       element={
                         <PagesDescriptions
                           name="your Job Duties"
@@ -116,7 +120,7 @@ const App = () => {
                       }
                     ></Route>
                     <Route
-                      path="/individual_use"
+                      path="/ToDoList/individual_use"
                       element={
                         <PagesDescriptions
                           name="things to do for yourself
@@ -127,7 +131,7 @@ const App = () => {
                       }
                     ></Route>
                     <Route
-                      path="/shopping_list"
+                      path="/ToDoList/shopping_list"
                       element={
                         <PagesDescriptions
                           name="your Shopping List"
@@ -137,7 +141,7 @@ const App = () => {
                       }
                     ></Route>
                     <Route
-                      path="/workout"
+                      path="/ToDoList/workout"
                       element={
                         <PagesDescriptions
                           name="your Workout Tasks"
@@ -147,7 +151,7 @@ const App = () => {
                       }
                     ></Route>
                     <Route
-                      path="/trip"
+                      path="/ToDoList/trip"
                       element={
                         <PagesDescriptions
                           name="things to take on a Trip"
