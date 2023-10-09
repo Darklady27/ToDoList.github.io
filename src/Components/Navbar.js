@@ -15,7 +15,7 @@ const Navbar = [
         Home
       </Link>
     ),
-    icon: <PiHouse className="images" style={{ fontSize: 25 }} />,
+    icon: <PiHouse className="images" />,
     key: "home",
   },
   {
@@ -24,7 +24,7 @@ const Navbar = [
         HouseholdChores
       </Link>
     ),
-    icon: <BsFillHouseAddFill className="images" style={{ fontSize: 25 }} />,
+    icon: <BsFillHouseAddFill className="images" />,
     key: "household",
   },
   {
@@ -33,7 +33,7 @@ const Navbar = [
         Job duties
       </Link>
     ),
-    icon: <MdWork className="images" style={{ fontSize: 25 }} />,
+    icon: <MdWork className="images" />,
     key: "duties",
   },
   {
@@ -42,7 +42,7 @@ const Navbar = [
         Individual Use
       </Link>
     ),
-    icon: <GiPeaceDove className="images" style={{ fontSize: 25 }} />,
+    icon: <GiPeaceDove className="images" />,
     key: "individual",
   },
   {
@@ -51,7 +51,7 @@ const Navbar = [
         Shopping list
       </Link>
     ),
-    icon: <FaShoppingCart className="images" style={{ fontSize: 25 }} />,
+    icon: <FaShoppingCart className="images" />,
     key: "shopping",
   },
   {
@@ -60,7 +60,7 @@ const Navbar = [
         Workout
       </Link>
     ),
-    icon: <CgGym className="images" style={{ fontSize: 25 }} />,
+    icon: <CgGym className="images" />,
     key: "workout",
   },
   {

@@ -1,104 +1,34 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital@1&family=Roboto+Serif:ital,opsz,wght@1,8..144,500&display=swap");
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: "Montserrat", sans-serif;
-  color: grey;
-  min-height: 100vh;
-  min-width: 100vw;
-}
-
-.menubar {
-  position: relative;
-  float: left;
-  font-size: 1.4rem;
-}
-
-.mode_button {
-  margin-left: 3rem;
-}
-
-.menu_name {
-  margin-left: 0.5rem;
-}
-
-.name {
-  font-size: 5rem;
-  color: rgb(22, 210, 119);
-}
-
-.homepage {
-  text-align: center;
-  margin-top: 8rem;
-  font-size: 5rem;
-}
-
-.items {
-  position: absolute;
-  margin-left: 2rem;
-  padding-top: 0px;
-  display: flex;
-  flex-direction: row;
-  margin-top: 1.25rem;
-}
-
-.textfield {
-  padding: 5rem 1rem 1rem;
-}
-
-textarea {
-  border: none;
-  box-shadow: 0.06rem 0rem 0.6rem 0.6rem #888888;
-}
-
-.notes {
-  background-attachment: local;
-  background-image: linear-gradient(to right, white 10px, transparent 10px),
-    linear-gradient(to left, white 10px, transparent 10px),
-    repeating-linear-gradient(
-      white,
-      white 1.8rem,
-      #ccc 1.8rem,
-      #ccc 1.9rem,
-      white 1.9rem
-    );
+textarea.notes {
   line-height: 1.9rem;
   padding: 0.5rem 0.6rem;
-}
-
-.add {
-  margin-top: 6rem;
-  margin-left: 3.1rem;
-  padding: 0.6rem;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10vh;
+  overflow: auto;
+  position: relative;
+  width: 100px;
+  resize: both;
 }
 
 .trash_delete {
   margin-left: 1rem;
   border: none;
-  background-color: white;
+  background-color: inherit;
 }
 
-#tasks {
-  box-sizing: border-box;
-  font-family: Garamond, cursive;
-  font-size: 1rem;
-  margin-top: 6rem;
-  padding: 0rem 1rem 1rem 1rem;
-  display: grid;
-  padding-left: 5rem;
+.tasks {
+  margin-top: 2vh;
 }
 
-#tasks ol {
-  width: 50rem;
-  height: 35rem;
+.tasks ol {
+  width: 50vw;
+  height: 80vh;
   position: relative;
-  background-color: white;
-  box-shadow: 0px 0px 5px 0px #1b1b1b;
-  margin-top: -5rem;
 }
 
-#tasks ol ::before {
+.tasks ol ::before {
   content: "";
   width: 2px;
   height: 100%;
@@ -108,9 +38,20 @@ textarea {
   background-color: rgba(255, 0, 0, 0.6);
 }
 
-.pattern {
-  height: 95%;
+.pattern_light {
+  height: 100%;
   background-image: repeating-linear-gradient(white 0px, white 24px, teal 25px);
+  overflow: auto;
+  border: solid;
+  border-width: 2px;
+}
+
+.pattern_dark {
+  height: 100%;
+  background-image: repeating-linear-gradient(black 0px, black 24px, teal 25px);
+  overflow: auto;
+  border: solid;
+  border-width: 2px;
 }
 
 .content {
@@ -130,6 +71,44 @@ textarea {
   font-weight: bold;
 }
 
-#tasks ol li {
-  padding: 0rem 0 0 1rem;
+.homepage {
+  text-align: center;
+  margin-top: 10%;
+  font-size: 50px;
 }
+
+.name {
+  color: rgb(22, 210, 119);
+  font-size: 60px;
+}
+
+.buttons {
+  margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  width: fit-content;
+}
+
+.add {
+  margin-top: 15vh;
+  float: left;
+  overflow: auto;
+  position: relative;
+}
+
+.tasks {
+  word-wrap: break-word;
+  display: flex;
+  justify-content: center;
+}
+
+/* .images {
+  font-size: 25px;
+} */
+
+/*ze jak pobieram to mam kreske czerwona no i jest strasznie bloisko numer i tekst*/
+
+/* i ze moze ten col z elemenatmi lisyty wystaje poza rozmair cola, jak to sprawdzic?? */
+
+/* czy powinnam miec w components wszytsko czy dobrze, ze dziele na pages? */
