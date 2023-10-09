@@ -11,7 +11,7 @@ import { BiSolidPlaneAlt } from "react-icons/bi";
 const Navbar = [
   {
     label: (
-      <Link to="/" className="menu_name">
+      <Link to="/ToDoList/" className="menu_name">
         Home
       </Link>
     ),
@@ -20,7 +20,7 @@ const Navbar = [
   },
   {
     label: (
-      <Link to="/household_chores" className="menu_name">
+      <Link to="/ToDoList/household_chores" className="menu_name">
         HouseholdChores
       </Link>
     ),
@@ -29,7 +29,7 @@ const Navbar = [
   },
   {
     label: (
-      <Link to="/job_duties" className="menu_name">
+      <Link to="/ToDoList/job_duties" className="menu_name">
         Job duties
       </Link>
     ),
@@ -38,7 +38,7 @@ const Navbar = [
   },
   {
     label: (
-      <Link to="/individual_use" className="menu_name">
+      <Link to="/ToDoList/individual_use" className="menu_name">
         Individual Use
       </Link>
     ),
@@ -47,7 +47,7 @@ const Navbar = [
   },
   {
     label: (
-      <Link to="/shopping_list" className="menu_name">
+      <Link to="/ToDoList/shopping_list" className="menu_name">
         Shopping list
       </Link>
     ),
@@ -56,7 +56,7 @@ const Navbar = [
   },
   {
     label: (
-      <Link to="/workout" className="menu_name">
+      <Link to="/ToDoList/workout" className="menu_name">
         Workout
       </Link>
     ),
@@ -65,7 +65,7 @@ const Navbar = [
   },
   {
     label: (
-      <Link to="/trip" className="menu_name">
+      <Link to="/ToDoList/trip" className="menu_name">
         Trip
       </Link>
     ),
