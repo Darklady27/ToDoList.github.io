@@ -1,4 +1,3 @@
-import logo from "./logo.png";
 import { Link } from "react-router-dom";
 import React from "react";
 import { PiHouse } from "react-icons/pi";
@@ -7,52 +6,44 @@ import { BsFillHouseAddFill } from "react-icons/bs";
 import { MdWork } from "react-icons/md";
 import { CgGym } from "react-icons/cg";
 import { GiPeaceDove } from "react-icons/gi";
+import { BiSolidPlaneAlt } from "react-icons/bi";
 
-const Navbar = ({ show, set }) => {
-  return (
-    <div className={show ? "sidenav active" : "sidenav"}>
-      <img src={logo} alt="Logo" className="logo" />
-      <ul>
-        <li>
-          <Link to="/" onClick={() => set(false)}>
-            <PiHouse className="images" />
-            Home
-          </Link>
-        </li>
-        <li>
-          <Link to="/household_chores" onClick={() => set(false)}>
-            <BsFillHouseAddFill className="images" />
-            Household Chores
-          </Link>
-        </li>
-        <li>
-          <Link to="/job_duties" onClick={() => set(false)}>
-            {" "}
-            <MdWork className="images" />
-            Job duties
-          </Link>
-        </li>
-        <li>
-          <Link to="/individual_use" onClick={() => set(false)}>
-            <GiPeaceDove className="images" />
-            Individual Use
-          </Link>
-        </li>
-        <li>
-          <Link to="/shopping_list" onClick={() => set(false)}>
-            <FaShoppingCart className="images" />
-            Shopping list
-          </Link>
-        </li>
-        <li>
-          <Link to="/workout" onClick={() => set(false)}>
-            <CgGym className="images" />
-            Workout
-          </Link>
-        </li>
-      </ul>
-    </div>
-  );
-};
+const Navbar = [
+  {
+    label: <Link to="/ToDoList/">Home</Link>,
+    icon: <PiHouse />,
+    key: "home",
+  },
+  {
+    label: <Link to="/ToDoList/household_chores">Household Chores</Link>,
+    icon: <BsFillHouseAddFill />,
+    key: "household",
+  },
+  {
+    label: <Link to="/ToDoList/job_duties">Job duties</Link>,
+    icon: <MdWork />,
+    key: "duties",
+  },
+  {
+    label: <Link to="/ToDoList/individual_use">Individual Use</Link>,
+    icon: <GiPeaceDove />,
+    key: "individual",
+  },
+  {
+    label: <Link to="/ToDoList/shopping_list">Shopping list</Link>,
+    icon: <FaShoppingCart />,
+    key: "shopping",
+  },
+  {
+    label: <Link to="/ToDoList/workout">Workout</Link>,
+    icon: <CgGym />,
+    key: "workout",
+  },
+  {
+    label: <Link to="/ToDoList/trip">Trip</Link>,
+    icon: <BiSolidPlaneAlt style={{ fontSize: 18 }} />,
+    key: "trip",
+  },
+];
 
 export default Navbar;
