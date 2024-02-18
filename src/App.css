@@ -3,16 +3,16 @@ textarea.notes {
   padding: 0.5rem 0.6rem;
   text-align: center;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 5%;
   margin-top: 10vh;
   overflow: auto;
   position: relative;
-  width: 100px;
-  resize: both;
+  width: 95%;
+  resize: vertical;
+  height: 20%;
 }
 
-.trash_delete {
+.trash-delete {
   margin-left: 1rem;
   border: none;
   background-color: inherit;
@@ -38,7 +38,7 @@ textarea.notes {
   background-color: rgba(255, 0, 0, 0.6);
 }
 
-.pattern_light {
+.pattern-light {
   height: 100%;
   background-image: repeating-linear-gradient(white 0px, white 24px, teal 25px);
   overflow: auto;
@@ -46,7 +46,7 @@ textarea.notes {
   border-width: 2px;
 }
 
-.pattern_dark {
+.pattern-dark {
   height: 100%;
   background-image: repeating-linear-gradient(black 0px, black 24px, teal 25px);
   overflow: auto;
@@ -90,25 +90,14 @@ textarea.notes {
   width: fit-content;
 }
 
-.add {
-  margin-top: 15vh;
-  float: left;
-  overflow: auto;
-  position: relative;
-}
-
 .tasks {
   word-wrap: break-word;
   display: flex;
   justify-content: center;
 }
 
-/* .images {
-  font-size: 25px;
-} */
-
-/*ze jak pobieram to mam kreske czerwona no i jest strasznie bloisko numer i tekst*/
-
-/* i ze moze ten col z elemenatmi lisyty wystaje poza rozmair cola, jak to sprawdzic?? */
-
-/* czy powinnam miec w components wszytsko czy dobrze, ze dziele na pages? */
+.mode-button {
+  float: right;
+  margin-top: 5%;
+  margin-right: 5%;
+}

@@ -7,7 +7,6 @@ import { BiDownload } from "react-icons/bi";
 import { AiOutlinePlus } from "react-icons/ai";
 import isDarkModeContext from "./Context";
 
-// import html2pdf from "html2pdf.js";
 const { TextArea } = Input;
 
 const PagesDescriptions = (props) => {
@@ -22,13 +21,6 @@ const PagesDescriptions = (props) => {
 
     const data = await document.querySelector("#pdf");
 
-    // html2pdf(data, {
-    //   margin: 1,
-    //   filename: "myfile.pdf",
-    //   image: { type: "jpeg", quality: 0.98 },
-    //   html2canvas: { dpi: 192, letterRendering: true },
-    //   jsPDF: { unit: "in", format: "letter", orientation: "portrait" },
-    // });
     pdf
       .html(data, {
         html2canvas: { scale: 0.65 },
@@ -41,15 +33,12 @@ const PagesDescriptions = (props) => {
   const [message, setMessage] = useState("");
 
   const handleMessageChange = (event) => {
-    //access textarea value
     setMessage(event.target.value);
-    console.log(event.target.value);
   };
 
   const handleTrash = (index) => {
     const newList = initialList.filter((_, i) => i !== index);
     setList(newList);
-    console.log(newList);
   };
 
   const [initialList, setList] = useState(
@@ -57,7 +46,6 @@ const PagesDescriptions = (props) => {
   );
 
   function handleOnDragEnd(result) {
-    console.log(result);
     if (!result.destination) return;
 
     const items = Array.from(initialList);
@@ -68,22 +56,19 @@ const PagesDescriptions = (props) => {
   }
 
   useEffect(() => {
-    // Retrieve count from local storage on component mount
     const storedCount = localStorage.getItem(props.name);
-    console.log(props.name);
+
     if (storedCount) {
       setList(JSON.parse(storedCount));
     }
   }, [props.name]);
 
   useEffect(() => {
-    // Save count to local storage whenever it changes
     localStorage.setItem(props.name, JSON.stringify(initialList));
   }, [initialList, props.name]);
 
   const showTaskList = () =>
     initialList.map((message, index) => {
-      console.log(message, index);
       return (
         <Draggable draggableId={`draggable-${index}`} index={index}>
           {(provided) => (
@@ -94,7 +79,7 @@ const PagesDescriptions = (props) => {
             >
               {message}
               <button
-                className="trash_delete"
+                className="trash-delete"
                 onClick={() => handleTrash(index)}
               >
                 <FaTrash style={{ color: isDarkMode ? "white" : "black" }} />
@@ -108,7 +93,7 @@ const PagesDescriptions = (props) => {
   return (
     <>
       <Row>
-        <Col span={6} className="textfield">
+        <Col span={8}>
           <>
             <TextArea
               className="notes"
@@ -133,16 +118,15 @@ const PagesDescriptions = (props) => {
               <Droppable droppableId="characters">
                 {(provided) => (
                   <ol
-                    className="task_list"
                     {...provided.droppableProps}
                     ref={provided.innerRef}
                     key="list"
                   >
                     <div
-                      className={isDarkMode ? "pattern_dark" : "pattern_light"}
+                      className={isDarkMode ? "pattern-dark" : "pattern-light"}
                     >
                       <p className="title">List of {props.name}</p>
-                      {/* /*ze moze dopiero tutaj zrobic ol a nie wczesniejj i wtedy tego darppable tez tu/* */}
+
                       <div className="content">
                         {showTaskList()}
                         {provided.placeholder}

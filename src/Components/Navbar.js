@@ -10,66 +10,38 @@ import { BiSolidPlaneAlt } from "react-icons/bi";
 
 const Navbar = [
   {
-    label: (
-      <Link to="/ToDoList/" className="menu_name">
-        Home
-      </Link>
-    ),
-    icon: <PiHouse className="images" />,
+    label: <Link to="/ToDoList/">Home</Link>,
+    icon: <PiHouse />,
     key: "home",
   },
   {
-    label: (
-      <Link to="/ToDoList/household_chores" className="menu_name">
-        HouseholdChores
-      </Link>
-    ),
-    icon: <BsFillHouseAddFill className="images" />,
+    label: <Link to="/ToDoList/household_chores">Household Chores</Link>,
+    icon: <BsFillHouseAddFill />,
     key: "household",
   },
   {
-    label: (
-      <Link to="/ToDoList/job_duties" className="menu_name">
-        Job duties
-      </Link>
-    ),
-    icon: <MdWork className="images" />,
+    label: <Link to="/ToDoList/job_duties">Job duties</Link>,
+    icon: <MdWork />,
     key: "duties",
   },
   {
-    label: (
-      <Link to="/ToDoList/individual_use" className="menu_name">
-        Individual Use
-      </Link>
-    ),
-    icon: <GiPeaceDove className="images" />,
+    label: <Link to="/ToDoList/individual_use">Individual Use</Link>,
+    icon: <GiPeaceDove />,
     key: "individual",
   },
   {
-    label: (
-      <Link to="/ToDoList/shopping_list" className="menu_name">
-        Shopping list
-      </Link>
-    ),
-    icon: <FaShoppingCart className="images" />,
+    label: <Link to="/ToDoList/shopping_list">Shopping list</Link>,
+    icon: <FaShoppingCart />,
     key: "shopping",
   },
   {
-    label: (
-      <Link to="/ToDoList/workout" className="menu_name">
-        Workout
-      </Link>
-    ),
-    icon: <CgGym className="images" />,
+    label: <Link to="/ToDoList/workout">Workout</Link>,
+    icon: <CgGym />,
     key: "workout",
   },
   {
-    label: (
-      <Link to="/ToDoList/trip" className="menu_name">
-        Trip
-      </Link>
-    ),
-    icon: <BiSolidPlaneAlt className="images" style={{ fontSize: 25 }} />,
+    label: <Link to="/ToDoList/trip">Trip</Link>,
+    icon: <BiSolidPlaneAlt style={{ fontSize: 18 }} />,
     key: "trip",
   },
 ];

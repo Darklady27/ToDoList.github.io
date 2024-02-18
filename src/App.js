@@ -11,7 +11,6 @@ import { BsFillMoonStarsFill } from "react-icons/bs";
 import { BsSun } from "react-icons/bs";
 
 const { Header, Content } = Layout;
-// co to znaczy i robi
 
 const App = () => {
   const [current, setCurrent] = useState("home");
@@ -31,7 +30,7 @@ const App = () => {
 
   const navbarDarkMode = (
     <Button
-      className="mode_button"
+      className="mode-button"
       style={{
         background: darkModeButtonBg,
         color: isDarkMode ? "black" : "white",
@@ -73,7 +72,6 @@ const App = () => {
               }}
             >
               <Header
-                className=" header"
                 style={{
                   padding: 0,
                 }}
@@ -81,7 +79,6 @@ const App = () => {
                 <Row>
                   <Col span={20}>
                     <Menu
-                      className="menubar"
                       onClick={onClick}
                       selectedKeys={[current]}
                       mode="horizontal"
